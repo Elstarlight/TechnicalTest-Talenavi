@@ -124,7 +124,7 @@ Ada di folder /postman, isinya:
   - Excel Export: export tanpa filter, dan request terpisah untuk tiap jenis filter (title, assignee, due date range, time tracked range, status, priority)
 - Talenavi-Local.postman_environment.json — environment lokal buat konfigurasi tambahan
 
-Cara pakainya tinggal import file collection-nya ke Postman, terus pastikan server lokal udah nyala sebelum jalanin request-nya. Karena tiap skenario filter sudah punya request sendiri-sendiri, waktu demo tinggal klik satu-satu tanpa perlu edit parameter.
+Cara pakainya tinggal import file collection-nya ke Postman, terus pastikan server lokal udah nyala sebelum jalanin request-nya. Karena tiap file sudah punya request sendiri-sendiri, waktu demo tinggal klik satu-satu tanpa perlu edit parameter.
 
 ## Validasi
 
