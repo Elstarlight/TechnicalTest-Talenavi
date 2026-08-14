@@ -84,9 +84,9 @@ Nanti bisa diakses di http://127.0.0.1:8000
 
 - POST /api/todos — bikin todo baru
 - GET /api/todos — ambil semua todo
-- GET /api/todos/{id} — detail satu todo
-- PUT /api/todos/{id} — update todo
-- DELETE /api/todos/{id} — hapus todo
+- GET /api/todos/id — detail satu todo
+- PUT /api/todos/id — update todo
+- DELETE /api/todos/id — hapus todo
 - GET /api/todos/export — export ke Excel
 
 Contoh body buat create todo:
@@ -117,12 +117,14 @@ File Excel hasil export ada 6 kolom (title, assignee, due_date, time_tracked, st
 
 ## Postman Collection
 
-Ada di folder /postman, nama filenya TalenaviTodoApp.postman_collection.json. Isinya dibagi 2 folder:
+Ada di folder /postman, isinya:
 
-- Todo CRUD: create (sukses & yang divalidasi gagal), get all, get detail, update, delete
-- Excel Export: export tanpa filter, dan beberapa skenario export dengan filter berbeda-beda
+- Technical Test - Talenavi.postman_collection.json — dibagi 2 folder:
+  - Todo CRUD: create todo sukses, create dengan validasi gagal (due_date masa lalu), get all, get detail, update, delete
+  - Excel Export: export tanpa filter, dan request terpisah untuk tiap jenis filter (title, assignee, due date range, time tracked range, status, priority)
+- Talenavi-Local.postman_environment.json — environment lokal buat konfigurasi tambahan
 
-Cara pakainya tinggal import file itu ke Postman, terus pastikan server lokal udah nyala sebelum jalanin request-nya.
+Cara pakainya tinggal import file collection-nya ke Postman, terus pastikan server lokal udah nyala sebelum jalanin request-nya. Karena tiap skenario filter sudah punya request sendiri-sendiri, waktu demo tinggal klik satu-satu tanpa perlu edit parameter.
 
 ## Validasi
 
